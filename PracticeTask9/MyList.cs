@@ -81,7 +81,22 @@ namespace PracticeTask9
             if (Beginning.Next != null)
                 Length = GetLengthRecoursive(Beginning.Next);
             return Length + 1;
-            
+        }
+
+        // Поиск количества элементов списка, не рекурсивный
+        public static int GetLength(MyList Beginning)
+        {
+            if (Beginning == null)
+                return 0;
+
+            int Length = 1;
+            while (Beginning.Next != null)
+            {
+                Beginning = Beginning.Next;
+                Length++;
+            }
+
+            return Length;
         }
     }
 }
