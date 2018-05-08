@@ -10,6 +10,13 @@ namespace PracticeTask9
     {
         static void Main(string[] args)
         {
+            Random rnd = new Random();
+            MyList List = MyList.MakeList(rnd.Next(101));
+
+            Console.WriteLine("В созданном списке {0} элементов.", MyList.GetLengthRecoursive(List));
+
+            Console.WriteLine("Нажмите любую клавишу...");
+            Console.ReadKey();
         }
     }
 }
